@@ -1,0 +1,25 @@
+$primary-color: rgba(68, 68, 68, 0.75);
+$secondary-color: #7575ff;
+$main-bg-url: url(../img/bg-main.png);
+$show-bg: true;
+$bg-opacity: 0.6;
+
+@mixin easeOutColor {
+	transition: color 1s ease-out;
+}
+
+@mixin background {
+	@if $show-bg {
+		background-image: $main-bg-url;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-color: rgba($primary-color, $bg-opacity);
+		}
+	}
+}

@@ -1,6 +1,78 @@
-$primary-color : #444;
-
+@import "config";
 body {
+	@include background();
 	background-color: $primary-color;
-	color: red;
+	color: #fff;
+		height: 100%;
+		line-height: 1.5;
+		margin: 0;
+	}
+	
+	//headings
+	h1,
+	h2,
+	h3 {
+		margin: 0;
+		font-weight: 400;
+	
+		&.title-1 {
+			font-size: 3rem;
+		}
+	
+		&.title-2 {
+			font-size: 1.5rem;
+			background-color: lighten($primary-color, 0.5);
+		}
+	
+		&.title-3 {
+			font-size: 0.75rem;
+		}
+	}
+	
+	.secondary-text {
+		color: $secondary-color;
+	}
+	
+	
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		width: 100%;
+	
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+	
+	
+	
+	main {
+		width: max-content;
+		margin: auto;
+	
+		.icon-list {
+			margin-top: 0.5rem;
+	
+			a {
+				display: inline-block;
+				padding: 0.25rem;
+	
+				&:hover .icon-item {
+					@include easeOutColor();
+					transform: scale(1.2);
+					fill: $secondary-color;
+				}
+			}
+		}
+	}
+	
+	.svg-fill-white {
+		fill: #fff;
+	}
+	
+	.ico-1 {
+		width: 32px;
+		display: inline-block;
 }
