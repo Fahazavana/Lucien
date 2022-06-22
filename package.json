@@ -1,0 +1,22 @@
+{
+  "name": "lucien_portofolio",
+  "version": "1.0.0",
+  "description": "RJ Lucien Portofolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/assets/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fahazavana/lucien.git"
+  },
+  "author": "Jean Lucien R.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fahazavana/lucien/issues"
+  },
+  "homepage": "https://github.com/Fahazavana/lucien#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
