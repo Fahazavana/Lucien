@@ -1,10 +1,10 @@
 {
-  "name": "lucien_portofolio",
+  "name": "lucien_portfolio",
   "version": "1.0.0",
-  "description": "RJ Lucien Portofolio",
+  "description": "Portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/assets/css --recursive"
+    "sass": "node-sass -w assets/scss/ -o assets/css --recursive --style compressed"
   },
   "repository": {
     "type": "git",

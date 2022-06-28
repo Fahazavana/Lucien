@@ -1,5 +1,5 @@
 $primary-color: rgba(68, 68, 68, 0.75);
-$secondary-color: #7575ff;
+$secondary-color: #53ff53;
 $main-bg-url: url(../img/bg-main.png);
 $show-bg: true;
 $bg-opacity: 0.6;
@@ -7,9 +7,11 @@ $bg-opacity: 0.6;
 * {
 	box-sizing: border-box;
 }
+
 @mixin easeOutColor {
 	transition: color 1s ease-out;
 }
+
 @mixin easeOutall {
 	transition: all 1s ease-in-out;
 }
@@ -28,4 +30,34 @@ $bg-opacity: 0.6;
 			background-color: rgba($primary-color, $bg-opacity);
 		}
 	}
+}
+
+
+// MEDIA QUERY
+@mixin media-sm {
+	@media screen and (max-width:500px) {
+		@content;
+	}
+
+}
+
+@mixin media-md {
+	@media screen and (max-width:768px) {
+		@content;
+	}
+
+}
+
+@mixin media-lg {
+	@media screen and (min-width:769px) and (max-width:1170px) {
+		@content;
+	}
+
+}
+
+@mixin media-xl {
+	@media screen and (min-width:1171px) {
+		@content;
+	}
+
 }

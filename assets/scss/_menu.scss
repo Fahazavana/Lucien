@@ -42,6 +42,7 @@
 		}
 	}
 }
+
 .menu {
 	position: fixed;
 	top: 0;
@@ -100,6 +101,7 @@
 			background-clip: border-box;
 			background-size: contain;
 			border: 2px $secondary-color solid;
+			background-repeat: no-repeat;
 		}
 	}
 
@@ -132,7 +134,7 @@
 
 @for $x from 1 to 4 {
 	.menu-nav-item:nth-child(#{$x}) {
-		transition-delay: $x * 0.3s;
+		transition-delay: $x * 0.2s;
 
 	}
 }

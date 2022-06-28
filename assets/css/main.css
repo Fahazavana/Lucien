@@ -72,7 +72,8 @@
       background-image: url(../img/profile.png);
       background-clip: border-box;
       background-size: contain;
-      border: 2px #7575ff solid; }
+      border: 2px #53ff53 solid;
+      background-repeat: no-repeat; }
   .menu-nav-item {
     transform: translateX(50vw);
     transition: all 1s ease-in-out; }
@@ -87,16 +88,50 @@
     text-decoration: none;
     transition: all 1s ease-in-out; }
     .menu .nav-link:hover {
-      color: #7575ff; }
+      color: #53ff53; }
 
 .menu-nav-item:nth-child(1) {
-  transition-delay: 0.3s; }
+  transition-delay: 0.2s; }
 
 .menu-nav-item:nth-child(2) {
-  transition-delay: 0.6s; }
+  transition-delay: 0.4s; }
 
 .menu-nav-item:nth-child(3) {
-  transition-delay: 0.9s; }
+  transition-delay: 0.6s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    text-align: center;
+    align-items: center; } }
+
+@media screen and (max-width: 500px) {
+  main {
+    padding-top: 25vh !important; }
+    main h1.title-1 {
+      font-size: 8vw; }
+    main h2.title-2 {
+      font-size: 4vw; }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100vw, 0, 0); }
+  .menu-brand {
+    transform: translate3d(100vw, 0, 0);
+    min-height: 250px;
+    height: 30vh; }
+    .menu-brand .pic-profile {
+      width: 170px;
+      height: 170px;
+      background-size: 100%;
+      background-position: center; }
+  .menu-nav-item {
+    transform: translateY(100vw); }
+    .menu-nav-item.show {
+      transform: translateY(0); }
+  .menu-nav, .menu-brand {
+    float: none;
+    width: 100%; }
+    .menu-nav.show, .menu-brand.show {
+      transform: translate3d(0, 0, 0); } }
 
 body {
   background-image: url(../img/bg-main.png);
@@ -122,19 +157,19 @@ h3 {
   h1.title-1,
   h2.title-1,
   h3.title-1 {
-    font-size: 3rem; }
+    font-size: 8vw; }
   h1.title-2,
   h2.title-2,
   h3.title-2 {
-    font-size: 1.5rem;
+    font-size: 5vw;
     background-color: rgba(69, 69, 69, 0.75); }
   h1.title-3,
   h2.title-3,
   h3.title-3 {
-    font-size: 0.75rem; }
+    font-size: 2.5vw; }
 
 .secondary-text {
-  color: #7575ff; }
+  color: #53ff53; }
 
 header {
   position: absolute;
@@ -146,6 +181,8 @@ header {
     text-decoration: none; }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   padding: 15rem 2rem;
@@ -158,7 +195,7 @@ main {
       main .icon-list a:hover .icon-item {
         transition: color 1s ease-out;
         transform: scale(1.2);
-        fill: #7575ff; }
+        fill: #53ff53; }
 
 .svg-fill-white {
   fill: #fff; }
